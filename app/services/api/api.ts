@@ -1,7 +1,12 @@
-import { ApisauceInstance, create, ApiResponse } from "apisauce"
-import { getGeneralApiProblem } from "./api-problem"
+
+import { ApisauceInstance } from "apisauce"
 import { ApiConfig, DEFAULT_API_CONFIG } from "./api-config"
 import * as Types from "./api.types"
+import { UserSnapshot } from "../../models/user"
+import { TransactionSnapshot } from "./../../models/transaction"
+import { v1 as uuid } from "uuid"
+import { parse } from "date-fns"
+import initialDataJSON from "./initial-data.json"
 
 /**
  * Manages all requests to the API.
@@ -34,69 +39,66 @@ export class Api {
    * Be as quick as possible in here.
    */
   setup() {
-    // construct the apisauce instance
-    this.apisauce = create({
-      baseURL: this.config.url,
-      timeout: this.config.timeout,
-      headers: {
-        Accept: "application/json",
-      },
-    })
+    // construct the apisauce instance - WE DON'T NEED THIS FOR NOW
+    // this.apisauce = create({
+    //   baseURL: this.config.url,
+    //   timeout: this.config.timeout,
+    //   headers: {
+    //     Accept: "application/json",
+    //   },
+    // })
   }
 
   /**
-   * Gets a list of users.
+   * Gets a single mock user
    */
-  async getUsers(): Promise<Types.GetUsersResult> {
-    // make the api call
-    const response: ApiResponse<any> = await this.apisauce.get(`/users`)
+  async getUser(): Promise<Types.GetUserResult> {
+    // const response: ApiResponse<any> = await this.apisauce.get(`/users/${id}`)
+    // make the *mock* api call
+    const response = initialDataJSON
 
     // the typical ways to die when calling an api
-    if (!response.ok) {
-      const problem = getGeneralApiProblem(response)
-      if (problem) return problem
-    }
-
-    const convertUser = raw => {
-      return {
-        id: raw.id,
-        name: raw.name,
-      }
-    }
-
+    // if (!response.ok) {
+    //   const problem = getGeneralApiProblem(response)
+    //   if (problem) return problem
+    // }
+    __DEV__ && console.tron.log(response)
     // transform the data into the format we are expecting
     try {
-      const rawUsers = response.data
-      const resultUsers: Types.User[] = rawUsers.map(convertUser)
-      return { kind: "ok", users: resultUsers }
-    } catch {
-      return { kind: "bad-data" }
-    }
-  }
-
-  /**
-   * Gets a single user by ID
-   */
-
-  async getUser(id: string): Promise<Types.GetUserResult> {
-    // make the api call
-    const response: ApiResponse<any> = await this.apisauce.get(`/users/${id}`)
-
-    // the typical ways to die when calling an api
-    if (!response.ok) {
-      const problem = getGeneralApiProblem(response)
-      if (problem) return problem
-    }
-
-    // transform the data into the format we are expecting
-    try {
-      const resultUser: Types.User = {
-        id: response.data.id,
-        name: response.data.name,
-      }
+      const resultUser: UserSnapshot = this.convertUser(response)
+      __DEV__ && console.tron.log(resultUser)
       return { kind: "ok", user: resultUser }
     } catch {
       return { kind: "bad-data" }
+    }
+  }
+
+  /**
+   * Converts an object into an MST acceptable TransactionSnapshot
+   * @param raw - the object to convert into a transaction
+   */
+  convertTransaction = (raw: any): TransactionSnapshot => {
+    return {
+      id: uuid(),
+      date: parse(raw.date, 'yyyy-MM-dd', new Date()).getTime(),
+      merchant: raw.merchant,
+      amount: raw.amount,
+      type: raw.type,
+      details: (raw.details !== undefined) ? raw.details : "",
+    }
+  }
+
+  /**
+   * Converts an object into an MST acceptable UserSnapshot
+   * @param raw - the object to convert into a user
+   */
+  convertUser = (raw: any): UserSnapshot => {
+    return {
+      id: uuid(),
+      name: raw.name,
+      avatar: raw.avatar,
+      balance: raw.balance,
+      transactions: raw.transactions.map(this.convertTransaction)
     }
   }
 }

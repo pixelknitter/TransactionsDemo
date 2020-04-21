@@ -1,9 +1,5 @@
 import { GeneralApiProblem } from "./api-problem"
+import { UserSnapshot } from "../../models/user/"
 
-export interface User {
-  id: number
-  name: string
-}
-
-export type GetUsersResult = { kind: "ok"; users: User[] } | GeneralApiProblem
-export type GetUserResult = { kind: "ok"; user: User } | GeneralApiProblem
+// mocks an api response for a user object
+export type GetUserResult = { kind: "ok"; user: UserSnapshot } | GeneralApiProblem
