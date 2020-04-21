@@ -28,6 +28,7 @@
     "@react-native-community/masked-view": "0.1.5",
     "@react-navigation/native": "^5.0.0",
     "apisauce": "1.1.1",
+    "date-fns": "^2.12.0",
     "i18n-js": "^3.0.11",
     "lodash.throttle": "4.1.1",
     "mobx": "^4.15.4",
