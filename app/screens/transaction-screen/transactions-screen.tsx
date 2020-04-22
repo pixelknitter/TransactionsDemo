@@ -44,9 +44,8 @@ const useAsyncUserTransactions = () => {
 
 export const TransactionsScreen: React.FunctionComponent<TransactionsScreenProps> = observer(() => {
   const { data, currentUser, loading } = useAsyncUserTransactions()
-  console.tron.log(`loading is: ${loading}`)
   return (
-    <Screen style={ROOT} preset="scroll">
+    <Screen style={ROOT} preset="fixed">
       <FlatList
         keyExtractor={(item) => item.id}
         data={data}
