@@ -62,11 +62,9 @@ export class Api {
     //   const problem = getGeneralApiProblem(response)
     //   if (problem) return problem
     // }
-    __DEV__ && console.tron.log(response)
     // transform the data into the format we are expecting
     try {
       const resultUser: UserSnapshot = this.convertUser(response)
-      __DEV__ && console.tron.log(resultUser)
       return { kind: "ok", user: resultUser }
     } catch {
       return { kind: "bad-data" }
