@@ -1,5 +1,5 @@
 import { Instance, SnapshotOut, types } from "mobx-state-tree"
-import { TransactionModel, Transaction } from "../transaction"
+import { Transaction, TransactionSnapshot } from "../transaction"
 
 /**
  * Model description here for TypeScript hints.
@@ -11,10 +11,9 @@ export const UserModel = types
     name: types.maybeNull(types.string),
     avatar: types.maybeNull(types.string),
     balance: types.maybeNull(types.number),
-    transactions: types.optional(types.array(TransactionModel), [])
   })
   .actions(self => ({
-    updateBalance: (transaction: Transaction) => {
+    updateBalance: (transaction: Transaction | TransactionSnapshot) => {
       const value = transaction.amount
       switch (transaction.type) {
         case "credit":

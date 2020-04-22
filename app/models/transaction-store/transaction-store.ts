@@ -33,6 +33,7 @@ export const TransactionStoreModel = types
         if (currentUser.id === associatedUserId) {
           currentUser.updateBalance(c)
         }
+        // TODO: look into sorting here
         return TransactionModel.create(c)
       })
       self.transactions.replace(transactionModels)
@@ -52,6 +53,7 @@ export const TransactionStoreModel = types
       if (currentUser.id === associatedUserId) {
         currentUser.updateBalance(transactionSnapshot)
       }
+      // TODO: insert into appropriate sort by DATE
       self.transactions.concat(TransactionModel.create(transactionSnapshot))
     },
   }))
@@ -60,8 +62,8 @@ export const TransactionStoreModel = types
       const result: GetUserResult = yield self.environment.api.getUser()
 
       if (result.kind === "ok") {
-        const { user } = result
-        self.saveTransactions(user.transactions, user.id)
+        const { user, transactions } = result
+        self.saveTransactions(transactions, user.id)
       } else {
         __DEV__ && console.tron.log(result.kind)
       }

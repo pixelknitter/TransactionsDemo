@@ -54,6 +54,7 @@ export class Api {
    */
   async getUser(): Promise<Types.GetUserResult> {
     // const response: ApiResponse<any> = await this.apisauce.get(`/users/${id}`)
+
     // make the *mock* api call
     const response = initialDataJSON
 
@@ -62,10 +63,12 @@ export class Api {
     //   const problem = getGeneralApiProblem(response)
     //   if (problem) return problem
     // }
+
     // transform the data into the format we are expecting
     try {
       const resultUser: UserSnapshot = this.convertUser(response)
-      return { kind: "ok", user: resultUser }
+      const resultTransactions: TransactionSnapshot[] = response.transactions.map(this.convertTransaction)
+      return { kind: "ok", user: resultUser, transactions: resultTransactions }
     } catch {
       return { kind: "bad-data" }
     }
@@ -96,7 +99,6 @@ export class Api {
       name: raw.name,
       avatar: raw.avatar,
       balance: raw.balance,
-      transactions: raw.transactions.map(this.convertTransaction)
     }
   }
 }
