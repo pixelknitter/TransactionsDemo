@@ -18,7 +18,9 @@ const detailsText = {
 }
 
 const balanceText = {
-  fontSize: 18
+  fontSize: 18,
+  fontWeight: '600',
+  alignSelf: 'flex-start'
 }
 
 export const transactionRowStyles = {
@@ -32,16 +34,23 @@ export const transactionRowStyles = {
   } as ViewStyle,
   DETAIL_CONTAINER: {
     flexDirection: 'column',
+    flexGrow: 1
   } as ViewStyle,
   MERCHANT_CONTAINER: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     alignItems: 'center',
   } as ViewStyle,
   MERCHANT_TEXT: {
     ...detailsText,
     fontWeight: 'bold',
+    marginLeft: spacing[2],
     fontSize: 20
+  } as TextStyle,
+  DATE_TEXT: {
+    ...detailsText,
+    fontWeight: '300',
+    fontSize: 16
   } as TextStyle,
   CREDIT_TEXT: {
     ...balanceText,

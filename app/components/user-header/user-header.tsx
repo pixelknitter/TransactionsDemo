@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { View, Image } from "react-native"
 import { Text } from "../"
 import { userHeaderStyles as styles } from "./user-header.styles"
@@ -27,7 +27,7 @@ export function UserHeader(props: UserHeaderProps) {
   return (
     <View style={styles.CONTAINER}>
       <View style={styles.AVATAR_CONTAINER}>
-        <Image source={{ uri: user.avatar }} style={styles.IMAGE_LAYOUT} />
+        <Image style={styles.IMAGE_LAYOUT} source={{ uri: user.avatar }} />
         <Text preset="header" text={user.name} />
       </View>
       <Text style={styles.BALANCE_TEXT} text={`$${formattedBalance}`} />
