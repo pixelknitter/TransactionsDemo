@@ -2,6 +2,7 @@ import { ViewStyle, TextStyle } from "react-native"
 import { color, spacing } from '../../theme'
 
 const MARGIN = 1
+const ROW_FONT = 18
 
 const container = {
   flexDirection: 'row',
@@ -18,7 +19,7 @@ const detailsText = {
 }
 
 const balanceText = {
-  fontSize: 18,
+  fontSize: ROW_FONT,
   fontWeight: '600',
   alignSelf: 'flex-start'
 }
@@ -45,12 +46,12 @@ export const transactionRowStyles = {
     ...detailsText,
     fontWeight: 'bold',
     marginLeft: spacing[2],
-    fontSize: 20
+    fontSize: ROW_FONT
   } as TextStyle,
   DATE_TEXT: {
     ...detailsText,
     fontWeight: '300',
-    fontSize: 16
+    fontSize: ROW_FONT
   } as TextStyle,
   CREDIT_TEXT: {
     ...balanceText,
