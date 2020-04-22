@@ -9,9 +9,9 @@ export interface UserHeaderProps {
 }
 
 /**
- * Stateless functional component for your needs
+ * User Header
  *
- * Component description here for TypeScript tips.
+ * Renders a header with details about the CurrentUser. Accepts a User object.
  */
 export function UserHeader(props: UserHeaderProps) {
   // grab the props

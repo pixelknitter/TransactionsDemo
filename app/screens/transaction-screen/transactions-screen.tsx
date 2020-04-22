@@ -18,6 +18,7 @@ const ROOT: ViewStyle = {
 
 const useAsyncUserTransactions = () => {
   const { userStore, transactionStore } = useStores()
+  // set initial state
   const [loading, setLoading] = useState(true)
   const [data, setData] = useState([])
   const [currentUser, setCurrentUser] = useState(null)
@@ -26,12 +27,14 @@ const useAsyncUserTransactions = () => {
     if (!loading) return
 
     const loadAsync = async () => {
+      // reset loading to true at start of the async call
       setLoading(true)
       await userStore.getUser()
         .then(() => setCurrentUser(userStore.currentUser))
         // sort the transactions in descending order so the latest transaction is at the top
         .then(() => setData(transactionStore.transactions.sort((a, b) => compareDesc(a.date, b.date))))
         .catch((e) => console.tron.error(e.message, e.stack))
+        // ensure we stop loading when call is finished regardless of success/fail
         .finally(() => setLoading(false))
     }
 

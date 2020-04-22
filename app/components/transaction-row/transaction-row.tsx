@@ -12,9 +12,9 @@ export interface TransactionRowProps {
 }
 
 /**
- * React.FunctionComponent for your hook(s) needs
+ * Transaction Row
  *
- * Renders the details of a transaction and expands to fit the content as needed.
+ * Renders the details of a transaction accepting a Transaction
  */
 export const TransactionRow: React.FunctionComponent<TransactionRowProps> = props => {
   const { transaction } = props
