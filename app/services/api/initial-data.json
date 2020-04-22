@@ -43,6 +43,76 @@
       "details": "March Rent"
     },
     {
+      "merchant": "Food for All",
+      "date": "2019-03-20",
+      "amount": 5000,
+      "type": "debit",
+      "details": "Charity"
+    },
+    {
+      "merchant": "ACLU",
+      "date": "2019-03-21",
+      "amount": 5000,
+      "type": "debit",
+      "details": "Charity"
+    },
+    {
+      "merchant": "WHO",
+      "date": "2019-04-20",
+      "amount": 5000,
+      "type": "debit",
+      "details": "Charity"
+    },
+    {
+      "merchant": "Medicare For All",
+      "date": "2019-04-21",
+      "amount": 5002,
+      "type": "debit",
+      "details": "Charity"
+    },
+    {
+      "merchant": "Doctors Without Borders",
+      "date": "2019-05-01",
+      "amount": 5000.52,
+      "type": "debit",
+      "details": "Charity"
+    },
+    {
+      "merchant": "Good Actor Inc",
+      "date": "2019-01-05",
+      "amount": 500,
+      "type": "credit",
+      "details": "paid for acting"
+    },
+    {
+      "merchant": "Good Actor Inc",
+      "date": "2019-02-05",
+      "amount": 500,
+      "type": "credit",
+      "details": "paid for acting"
+    },
+    {
+      "merchant": "Good Actor Inc",
+      "date": "2019-04-05",
+      "amount": 500,
+      "type": "credit",
+      "details": "paid for acting"
+    },
+    {
+      "merchant": "Good Actor Inc",
+      "date": "2019-05-05",
+      "amount": 500,
+      "type": "credit",
+      "details": "paid for acting"
+    },
+    {
+      "merchant": "Good Actor Inc",
+      "date": "2019-06-05",
+      "amount": 500,
+      "type": "credit",
+      "details": "paid for acting"
+    },
+    {
       "merchant": "Bad Actor Inc",
       "date": "2019-03-03",
       "amount": null,
