@@ -18,10 +18,12 @@ export const TransactionRow: React.FunctionComponent<TransactionRowProps> = prop
   const { transaction } = props
   const isCredit = transaction.type === "credit"
   const hasDetails = transaction.details && transaction.details.length > 0
-  // Provides a comma delimited number up to 2 fractional digits
-  const amountString = transaction.amount ? transaction.amount.toLocaleString(undefined, { maximumFractionDigits: 2 }) : "N/A"
 
+  // Provides a comma delimited number up to 2 fractional digits, display "N/A" if missing
+  const amountString = transaction.amount ? transaction.amount.toLocaleString(undefined, { maximumFractionDigits: 2 }) : "N/A"
   const formattedAmount = isCredit ? amountString : `(${amountString})`
+
+  // sets styling based upon whether the transaction is a credit or debit
   const AMOUNT_STYLE = isCredit ? styles.CREDIT_TEXT : styles.DEBIT_TEXT
   const CONTAINER_STYLE = isCredit ? styles.CREDIT_CONTAINER : styles.CONTAINER
 
@@ -32,7 +34,7 @@ export const TransactionRow: React.FunctionComponent<TransactionRowProps> = prop
           <Text style={styles.DATE_TEXT} text={format(transaction.date, "yyyy-MM-dd")} />
           <Text style={styles.MERCHANT_TEXT} text={transaction.merchant} />
         </View>
-        {/* Ensure that the details has a length otherwise don't render an element */}
+        {/* Ensure that the details exist otherwise don't render an element */}
         {hasDetails ? <Text style={styles.DETAILS_TEXT} text={transaction.details} /> : null}
       </View>
       <Text style={AMOUNT_STYLE} text={formattedAmount} />
