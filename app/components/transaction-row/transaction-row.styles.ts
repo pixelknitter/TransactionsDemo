@@ -61,6 +61,7 @@ export const transactionRowStyles = {
     color: color.palette.vibrantOrange
   } as TextStyle,
   DETAILS_TEXT: {
-    ...detailsText
+    ...detailsText,
+    marginTop: spacing[2]
   } as TextStyle
 }

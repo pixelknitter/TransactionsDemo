@@ -29,7 +29,7 @@ export const TransactionRow: React.FunctionComponent<TransactionRowProps> = prop
     <View style={CONTAINER_STYLE}>
       <View style={styles.DETAIL_CONTAINER}>
         <View style={styles.MERCHANT_CONTAINER}>
-          <Text style={styles.DETAILS_TEXT} text={format(transaction.date, "yyyy-MM-dd")} />
+          <Text style={styles.DATE_TEXT} text={format(transaction.date, "yyyy-MM-dd")} />
           <Text style={styles.MERCHANT_TEXT} text={transaction.merchant} />
         </View>
         {/* Ensure that the details has a length otherwise don't render an element */}

@@ -6,6 +6,7 @@ import { NativeStackNavigationProp } from "react-native-screens/native-stack"
 import { Screen, TransactionRow, UserHeader } from "../../components"
 import { useStores } from "../../models/root-store"
 import { color } from "../../theme"
+import { compareDesc } from "date-fns"
 
 export interface TransactionsScreenProps {
   navigation: NativeStackNavigationProp<ParamListBase>
@@ -25,9 +26,11 @@ const useAsyncUserTransactions = () => {
     if (!loading) return
 
     const loadAsync = async () => {
+      setLoading(true)
       await userStore.getUser()
         .then(() => setCurrentUser(userStore.currentUser))
-        .then(() => setData(transactionStore.transactions))
+        // sort the transactions in descending order so the latest transaction is at the top
+        .then(() => setData(transactionStore.transactions.sort((a, b) => compareDesc(a.date, b.date))))
         .catch((e) => console.tron.error(e.message, e.stack))
         .finally(() => setLoading(false))
     }
