@@ -2,6 +2,7 @@ import { Instance, SnapshotOut, types, flow } from "mobx-state-tree"
 import { TransactionModel, TransactionSnapshot, Transaction } from "../transaction"
 import { GetUserResult } from '../../services/api'
 import { withEnvironment } from '../extensions'
+import { withRootStore } from '../extensions/with-root-store'
 
 /**
  * Model description here for TypeScript hints.
@@ -13,16 +14,45 @@ export const TransactionStoreModel = types
     transactions: types.optional(types.array(TransactionModel), [])
   })
   .extend(withEnvironment)
+  .extend(withRootStore)
   .views(self => ({})) // eslint-disable-line @typescript-eslint/no-unused-vars
   .actions(self => ({
-    saveTransactions: (transactionSnapshots: TransactionSnapshot[], associatedUserId?: string) => {
-      // Set the associated User ID if it didn't exist
-      if (associatedUserId) {
+    /**
+     * Save a collection of transactions to a user
+     */
+    saveTransactions: (transactionSnapshots: TransactionSnapshot[], associatedUserId: string) => {
+      // TODO: add additional support for pagination
+      // Set the associated User ID if it doesn't exist
+      if (!self.associatedUserId) {
         self.associatedUserId = associatedUserId
       }
       // Map the snapshot to the transactions list
-      const transactionModels: Transaction[] = transactionSnapshots.map(c => TransactionModel.create(c))
+      const transactionModels: Transaction[] = transactionSnapshots.map(c => {
+        const currentUser = self.rootStore.userStore.currentUser
+        // make sure the user IDs match, then update the balance
+        if (currentUser.id === associatedUserId) {
+          currentUser.updateBalance(c)
+        }
+        return TransactionModel.create(c)
+      })
       self.transactions.replace(transactionModels)
+    },
+    /**
+     * Save an individual transaction to a user
+     */
+    saveTransaction: (transactionSnapshot: TransactionSnapshot | Transaction, associatedUserId: string) => {
+      const currentUser = self.rootStore.userStore.currentUser
+
+      // Set the associated User ID if it doesn't exist
+      if (!self.associatedUserId) {
+        self.associatedUserId = associatedUserId
+      }
+
+      // make sure the user IDs match, then update the balance
+      if (currentUser.id === associatedUserId) {
+        currentUser.updateBalance(transactionSnapshot)
+      }
+      self.transactions.concat(TransactionModel.create(transactionSnapshot))
     },
   }))
   .actions(self => ({
