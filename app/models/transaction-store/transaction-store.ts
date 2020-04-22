@@ -9,13 +9,18 @@ import { withEnvironment } from '../extensions'
 export const TransactionStoreModel = types
   .model("TransactionStore")
   .props({
-    associatedUserId: types.optional(types.identifier, "-1"),
+    associatedUserId: types.optional(types.string, "-1"),
     transactions: types.optional(types.array(TransactionModel), [])
   })
   .extend(withEnvironment)
   .views(self => ({})) // eslint-disable-line @typescript-eslint/no-unused-vars
   .actions(self => ({
-    saveTransactions: (transactionSnapshots: TransactionSnapshot[]) => {
+    saveTransactions: (transactionSnapshots: TransactionSnapshot[], associatedUserId?: string) => {
+      // Set the associated User ID if it didn't exist
+      if (associatedUserId) {
+        self.associatedUserId = associatedUserId
+      }
+      // Map the snapshot to the transactions list
       const transactionModels: Transaction[] = transactionSnapshots.map(c => TransactionModel.create(c))
       self.transactions.replace(transactionModels)
     },
@@ -25,7 +30,8 @@ export const TransactionStoreModel = types
       const result: GetUserResult = yield self.environment.api.getUser()
 
       if (result.kind === "ok") {
-        self.saveTransactions(result.user.transactions)
+        const { user } = result
+        self.saveTransactions(user.transactions, user.id)
       } else {
         __DEV__ && console.tron.log(result.kind)
       }

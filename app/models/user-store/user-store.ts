@@ -1,7 +1,7 @@
 import { Instance, SnapshotOut, types, flow } from "mobx-state-tree"
 import { GetUserResult } from "./../../services/api"
 import { UserModel, UserSnapshot } from "../user"
-import { withEnvironment } from "../extensions"
+import { withEnvironment, withRootStore } from "../extensions"
 
 /**
  * Model description here for TypeScript hints.
@@ -12,6 +12,7 @@ export const UserStoreModel = types
     currentUser: types.optional(UserModel, {}),
   })
   .extend(withEnvironment)
+  .extend(withRootStore)
   .views(self => ({})) // eslint-disable-line @typescript-eslint/no-unused-vars
   .actions(self => ({
     /**
@@ -26,7 +27,11 @@ export const UserStoreModel = types
       const result: GetUserResult = yield self.environment.api.getUser()
 
       if (result.kind === "ok") {
-        self.saveCurrentUser(result.user)
+        const { user } = result
+        const { transactionStore } = self.rootStore
+        self.saveCurrentUser(user)
+        // Since we're using a single mock call, using the rootStore to access transactions and saving them separately for future domain isolation.
+        transactionStore.saveTransactions(user.transactions, user.id)
       } else {
         __DEV__ && console.tron.log(result.kind)
       }
