@@ -34,6 +34,26 @@
       "amount": 1500,
       "type": "credit",
       "details": "Federal Income Tax Refund"
+    },
+    {
+      "merchant": "Raymond Landlord",
+      "date": "2019-03-01",
+      "amount": 1250,
+      "type": "debit",
+      "details": "March Rent"
+    },
+    {
+      "merchant": "Bad Actor Inc",
+      "date": "2019-03-03",
+      "amount": null,
+      "type": "credit",
+      "details": null
+    },
+    {
+      "merchant": "π Inc",
+      "date": "2017-03-14",
+      "amount": 15926,
+      "type": "debit"
     }
   ]
 }

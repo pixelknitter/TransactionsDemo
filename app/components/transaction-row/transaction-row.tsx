@@ -17,9 +17,9 @@ export interface TransactionRowProps {
 export const TransactionRow: React.FunctionComponent<TransactionRowProps> = props => {
   const { transaction } = props
   const isCredit = transaction.type === "credit"
-  const hasDetails = transaction.details.length > 0
+  const hasDetails = transaction.details && transaction.details.length > 0
   // Provides a comma delimited number up to 2 fractional digits
-  const amountString = transaction.amount.toLocaleString(undefined, { maximumFractionDigits: 2 })
+  const amountString = transaction.amount ? transaction.amount.toLocaleString(undefined, { maximumFractionDigits: 2 }) : "N/A"
 
   const formattedAmount = isCredit ? amountString : `(${amountString})`
   const AMOUNT_STYLE = isCredit ? styles.CREDIT_TEXT : styles.DEBIT_TEXT
