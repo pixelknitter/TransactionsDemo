@@ -7,7 +7,7 @@ const FONT_SIZE = 24
 
 const balanceText = {
   fontSize: FONT_SIZE,
-  fontWeight: 'bold'
+  fontWeight: '500'
 }
 
 export const userHeaderStyles = {
@@ -19,14 +19,16 @@ export const userHeaderStyles = {
     padding: spacing[2] + spacing[1],
     backgroundColor: color.background
   } as ViewStyle,
-  AVATAR_CONTAINER: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
+  RIGHT_CONTAINER: {
+    alignItems: 'flex-end',
+    justifyContent: 'space-between'
   } as ViewStyle,
   IMAGE_LAYOUT: {
     width: IMAGE_SIZE,
     height: IMAGE_SIZE,
     borderRadius: IMAGE_SIZE / 2,
+    borderColor: color.palette.lightBlue,
+    borderWidth: 2,
     marginRight: spacing[2]
   } as ImageStyle,
   BALANCE_TEXT: {

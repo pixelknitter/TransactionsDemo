@@ -33,12 +33,12 @@ export function UserHeader(props: UserHeaderProps) {
 
   return (
     <View style={styles.CONTAINER}>
-      <View style={styles.AVATAR_CONTAINER}>
-        {/* TODO: swap with async progressive loading image component */}
-        <Image style={styles.IMAGE_LAYOUT} source={{ uri: user.avatar }} />
+      {/* TODO: swap with async progressive loading image component */}
+      <Image style={styles.IMAGE_LAYOUT} source={{ uri: user.avatar }} />
+      <View style={styles.RIGHT_CONTAINER}>
         <Text preset="header" text={user.name} />
+        <Text style={BALANCE_STYLE} text={formattedBalance} />
       </View>
-      <Text style={BALANCE_STYLE} text={formattedBalance} />
     </View>
   )
 }
