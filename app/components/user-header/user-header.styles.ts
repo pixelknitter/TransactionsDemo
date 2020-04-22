@@ -5,6 +5,11 @@ const IMAGE_SIZE = 80
 const CONTAINER_HEIGHT = 100
 const FONT_SIZE = 24
 
+const balanceText = {
+  fontSize: FONT_SIZE,
+  fontWeight: 'bold'
+}
+
 export const userHeaderStyles = {
   CONTAINER: {
     flexDirection: 'row',
@@ -25,7 +30,10 @@ export const userHeaderStyles = {
     marginRight: spacing[2]
   } as ImageStyle,
   BALANCE_TEXT: {
-    fontSize: FONT_SIZE,
-    fontWeight: 'bold'
+    ...balanceText
+  } as TextStyle,
+  BALANCE_NEGATIVE_TEXT: {
+    ...balanceText,
+    color: color.palette.vibrantOrange
   } as TextStyle
 }

@@ -20,17 +20,25 @@ export function UserHeader(props: UserHeaderProps) {
   // don't render if the user is null
   if (!user) { return null }
 
-  // format the balance with comma delimination and a fixed fraction
-  const formattedBalance = user.balance.toLocaleString(undefined, { maximumFractionDigits: 2 })
-  // TODO: add a styling change if it goes negative
+  // conditional helpers
+  const hasBalance = user && user.balance
+  const hasNegativeBalance = hasBalance && user.balance < 0
+
+  // format the balance with comma delimination and a fixed fraction, make it unsigned
+  const balanceString = hasBalance && Math.abs(user.balance).toLocaleString(undefined, { maximumFractionDigits: 2 })
+  const formattedBalance = hasNegativeBalance ? `($${balanceString})` : `$${balanceString}`
+
+  // set styling based upon balance negativity
+  const BALANCE_STYLE = hasNegativeBalance ? styles.BALANCE_NEGATIVE_TEXT : styles.BALANCE_TEXT
 
   return (
     <View style={styles.CONTAINER}>
       <View style={styles.AVATAR_CONTAINER}>
+        {/* TODO: swap with async progressive loading image component */}
         <Image style={styles.IMAGE_LAYOUT} source={{ uri: user.avatar }} />
         <Text preset="header" text={user.name} />
       </View>
-      <Text style={styles.BALANCE_TEXT} text={`$${formattedBalance}`} />
+      <Text style={BALANCE_STYLE} text={formattedBalance} />
     </View>
   )
 }
