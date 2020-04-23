@@ -1,6 +1,5 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { View, Animated } from "react-native"
-import { useObserver } from "mobx-react-lite"
 import { asyncImageStyles as styles } from "./async-image.styles"
 import { mergeAll, flatten } from "ramda"
 
@@ -10,7 +9,7 @@ export interface AsyncImageProps {
   source
 }
 
-const useAnimatedEffects = () => {
+const useImplosionExplosion = () => {
   const imageOpacity = useRef(new Animated.Value(0.0)).current
   const placeholderOpacity = useRef(new Animated.Value(1.0)).current
   const placeholderScale = useRef(new Animated.Value(1.0)).current
@@ -22,7 +21,7 @@ const useAnimatedEffects = () => {
       Animated.parallel([
         Animated.timing(placeholderScale, {
           toValue: 0.7,
-          duration: 100,
+          duration: 200,
           useNativeDriver: true
         }),
         Animated.timing(placeholderOpacity, {
@@ -37,18 +36,18 @@ const useAnimatedEffects = () => {
         Animated.parallel([
           Animated.timing(placeholderOpacity, {
             toValue: 0,
-            duration: 200,
+            duration: 150,
             useNativeDriver: true
           }),
           Animated.timing(placeholderScale, {
             toValue: 1.2,
-            duration: 200,
+            duration: 150,
             useNativeDriver: true
           }),
         ]),
         Animated.timing(imageOpacity, {
           toValue: 1.0,
-          delay: 200,
+          delay: 225,
           duration: 300,
           useNativeDriver: true
         })
@@ -58,11 +57,16 @@ const useAnimatedEffects = () => {
     })
   }
 
+  useEffect(() => {
+    animateImage()
+  }, [loaded])
+
   return {
+    loaded,
+    setLoaded,
     imageOpacity,
     placeholderOpacity,
     placeholderScale,
-    loaded,
     animateImage
   }
 }
@@ -74,7 +78,7 @@ const useAnimatedEffects = () => {
  */
 export const AsyncImage: React.FunctionComponent<AsyncImageProps> = props => {
   const { placeholderColor, style, source } = props
-  const { animateImage, loaded, imageOpacity, placeholderOpacity, placeholderScale } = useAnimatedEffects()
+  const { loaded, imageOpacity, placeholderOpacity, placeholderScale } = useImplosionExplosion()
 
   // manage the sources of styles
   const CONTAINER_STYLE = mergeAll(flatten([style, styles.WRAPPER]))
@@ -87,16 +91,15 @@ export const AsyncImage: React.FunctionComponent<AsyncImageProps> = props => {
     transform: [{ scale: placeholderScale }]
   }]))
 
-  return useObserver(() => (
+  return (
     <View style={CONTAINER_STYLE}>
       <Animated.Image
         source={source}
         resizeMode={'contain'}
         style={IMAGE_STYLE}
-        onLoad={() => animateImage()}
       />
       {!loaded &&
         <Animated.View style={PLACEHOLDER_STYLE} />}
     </View>
-  ))
+  )
 }
