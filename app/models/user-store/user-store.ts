@@ -2,14 +2,15 @@ import { Instance, SnapshotOut, types, flow } from "mobx-state-tree"
 import { GetUserResult } from "./../../services/api"
 import { UserModel, UserSnapshot, User } from "../user"
 import { withEnvironment, withRootStore } from "../extensions"
+import { Transaction, TransactionSnapshot } from "../transaction"
 
 /**
- * Model description here for TypeScript hints.
+ * Stores the current user and relevant actions
  */
 export const UserStoreModel = types
   .model("UserStore")
   .props({
-    currentUser: types.optional(UserModel, {}),
+    currentUser: types.optional(UserModel, () => UserModel.create({})),
   })
   .extend(withEnvironment)
   .extend(withRootStore)
@@ -21,6 +22,26 @@ export const UserStoreModel = types
     saveCurrentUser: (userSnapshot: UserSnapshot | User) => {
       self.currentUser = UserModel.create(userSnapshot)
     },
+    /**
+     * Update the current user's balance based upon the transaction type
+     */
+    updateBalance: (transaction: Transaction | TransactionSnapshot) => {
+      const value = transaction.amount
+      switch (transaction.type) {
+        case "credit":
+          self.currentUser.balance += value
+          break
+        case "debit":
+          self.currentUser.balance -= value
+          break
+      }
+    },
+    /**
+     * Resets the store
+     */
+    reset: () => {
+      self.currentUser = UserModel.create({})
+    }
   }))
   .actions(self => ({
     getUser: flow(function * () {

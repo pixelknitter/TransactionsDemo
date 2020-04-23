@@ -8,7 +8,7 @@ import { compareDesc } from "date-fns"
 export type SectionedTransactions = { title: string, data: Transaction[] }
 
 /**
- * Model description here for TypeScript hints.
+ * Storage for the list of transactions by userId and relevant actions
  */
 export const TransactionStoreModel = types
   .model("TransactionStore")
@@ -30,12 +30,11 @@ export const TransactionStoreModel = types
       }
       // Map the snapshot to the transactions list
       const transactionModels: Transaction[] = transactionSnapshots.map(c => {
-        const currentUser = self.rootStore.userStore.currentUser
+        const { currentUser, updateBalance } = self.rootStore.userStore
         // make sure the user IDs match, then update the balance
         if (currentUser.id === associatedUserId) {
-          currentUser.updateBalance(c)
+          updateBalance(c)
         }
-        // TODO: look into sorting here
         return TransactionModel.create(c)
       })
       self.transactions.replace(transactionModels)
@@ -44,7 +43,7 @@ export const TransactionStoreModel = types
      * Save an individual transaction to a user
      */
     saveTransaction: (transactionSnapshot: TransactionSnapshot | Transaction, associatedUserId: string) => {
-      const currentUser = self.rootStore.userStore.currentUser
+      const { currentUser, updateBalance } = self.rootStore.userStore
 
       // Set the associated User ID if it doesn't exist
       if (!self.associatedUserId) {
@@ -53,13 +52,23 @@ export const TransactionStoreModel = types
 
       // make sure the user IDs match, then update the balance
       if (currentUser.id === associatedUserId) {
-        currentUser.updateBalance(transactionSnapshot)
+        updateBalance(transactionSnapshot)
       }
-      // TODO: insert into appropriate sort by DATE
-      self.transactions.concat(TransactionModel.create(transactionSnapshot))
+
+      self.transactions.push(TransactionModel.create(transactionSnapshot))
     },
+    /**
+     * Resets the store
+     */
+    reset: () => {
+      self.associatedUserId = "-1"
+      self.transactions.clear()
+    }
   }))
   .actions(self => ({
+    /**
+     * Get transactions from the user endpoint
+     */
     getTransactions: flow(function * () {
       const result: GetUserResult = yield self.environment.api.getUser()
 

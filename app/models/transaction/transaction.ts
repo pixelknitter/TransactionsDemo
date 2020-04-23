@@ -3,7 +3,7 @@ import { Instance, SnapshotOut, types } from "mobx-state-tree"
 export type LineType = "debit" | "credit"
 
 /**
- * Model description here for TypeScript hints.
+ * A transaction with date, merchant, amount, type, and any details associated.
  */
 export const TransactionModel = types
   .model("Transaction")

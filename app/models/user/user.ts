@@ -1,8 +1,7 @@
 import { Instance, SnapshotOut, types } from "mobx-state-tree"
-import { Transaction, TransactionSnapshot } from "../transaction"
 
 /**
- * Model description here for TypeScript hints.
+ * User with an avatar and balance
  */
 export const UserModel = types
   .model("User")
@@ -12,19 +11,8 @@ export const UserModel = types
     avatar: types.maybeNull(types.string),
     balance: types.maybeNull(types.number),
   })
-  .actions(self => ({
-    updateBalance: (transaction: Transaction | TransactionSnapshot) => {
-      const value = transaction.amount
-      switch (transaction.type) {
-        case "credit":
-          self.balance += value
-          break
-        case "debit":
-          self.balance -= value
-          break
-      }
-    }
-  }))
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  .actions(self => ({}))
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   .views(self => ({}))
 
