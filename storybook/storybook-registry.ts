@@ -1,3 +1,4 @@
+require("../app/components/async-image/async-image.story")
 require("../app/components/user-header/user-header.story")
 require("../app/components/transaction-row/transaction-row.story")
 require("../app/components/text/text.story")

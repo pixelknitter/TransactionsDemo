@@ -27,8 +27,6 @@ export const userHeaderStyles = {
     width: IMAGE_SIZE,
     height: IMAGE_SIZE,
     borderRadius: IMAGE_SIZE / 2,
-    borderColor: color.palette.lightBlue,
-    borderWidth: 2,
     marginRight: spacing[2]
   } as ImageStyle,
   BALANCE_TEXT: {

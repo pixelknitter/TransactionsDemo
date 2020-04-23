@@ -1,8 +1,9 @@
 import React from "react"
-import { View, Image } from "react-native"
-import { Text } from "../"
+import { View } from "react-native"
+import { Text, AsyncImage } from "../"
 import { userHeaderStyles as styles } from "./user-header.styles"
 import { User } from '../../models/user'
+import { color } from "../../theme"
 
 export interface UserHeaderProps {
   user: User
@@ -33,8 +34,10 @@ export function UserHeader(props: UserHeaderProps) {
 
   return (
     <View style={styles.CONTAINER}>
-      {/* TODO: swap with async progressive loading image component */}
-      <Image style={styles.IMAGE_LAYOUT} source={{ uri: user.avatar }} />
+      <AsyncImage style={styles.IMAGE_LAYOUT}
+        source={{ uri: user.avatar }}
+        placeholderColor={color.palette.tealBlue}
+      />
       <View style={styles.RIGHT_CONTAINER}>
         <Text preset="header" text={user.name} />
         <Text style={BALANCE_STYLE} text={formattedBalance} />
