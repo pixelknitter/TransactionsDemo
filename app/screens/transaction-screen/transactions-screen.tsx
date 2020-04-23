@@ -58,6 +58,7 @@ export const TransactionsScreen: React.FunctionComponent<TransactionsScreenProps
   const { data, currentUser, loading } = useAsyncUserTransactions()
   return (
     <Screen style={ROOT} preset="fixed">
+      <UserHeader user={currentUser} />
       <SectionList
         keyExtractor={(item) => item.id}
         sections={data}
@@ -66,8 +67,7 @@ export const TransactionsScreen: React.FunctionComponent<TransactionsScreenProps
         renderSectionHeader={({ section: { title } }) => (
           <Text style={SECTION}>{title}</Text>
         )}
-        ListHeaderComponent={() => <UserHeader user={currentUser} />}
-        stickyHeaderIndices={[0]}
+        stickySectionHeadersEnabled
       />
     </Screen>
   )
