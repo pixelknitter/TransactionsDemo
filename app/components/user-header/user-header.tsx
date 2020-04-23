@@ -1,12 +1,39 @@
-import React from "react"
-import { View } from "react-native"
+import React, { useRef, useEffect } from "react"
+import { View, Animated } from "react-native"
 import { Text, AsyncImage } from "../"
 import { userHeaderStyles as styles } from "./user-header.styles"
 import { User } from '../../models/user'
 import { color } from "../../theme"
+import { flatten, mergeAll } from "ramda"
 
 export interface UserHeaderProps {
   user: User
+}
+
+const useFadeInLeft = () => {
+  const opacity = useRef(new Animated.Value(0.0)).current
+  const xDelta = useRef(new Animated.Value(0.0)).current
+
+  useEffect(() => {
+    Animated.parallel([
+      Animated.timing(opacity, {
+        toValue: 1.0,
+        delay: 200,
+        duration: 300,
+        useNativeDriver: true
+      }),
+      Animated.timing(xDelta, {
+        toValue: 1.0,
+        duration: 200,
+        useNativeDriver: true
+      })
+    ]).start()
+  }, [opacity, xDelta])
+
+  return {
+    opacity,
+    xDelta
+  }
 }
 
 /**
@@ -17,9 +44,23 @@ export interface UserHeaderProps {
 export function UserHeader(props: UserHeaderProps) {
   // grab the props
   const { user } = props
+  const { opacity, xDelta } = useFadeInLeft()
 
   // don't render if the user is null
   if (!user) { return null }
+
+  // merge styles for animation, fade in from the left 10
+  const RIGHT_CONTAINER = mergeAll(flatten([styles.RIGHT_CONTAINER, {
+    opacity: opacity,
+    transform: [
+      {
+        translateX: xDelta.interpolate({
+          inputRange: [0, 1],
+          outputRange: [0, -20]
+        })
+      }
+    ],
+  }]))
 
   // conditional helpers
   const hasBalance = user && user.balance
@@ -38,10 +79,10 @@ export function UserHeader(props: UserHeaderProps) {
         source={{ uri: user.avatar }}
         placeholderColor={color.palette.tealBlue}
       />
-      <View style={styles.RIGHT_CONTAINER}>
+      <Animated.View style={RIGHT_CONTAINER}>
         <Text preset="header" text={user.name} />
         <Text style={BALANCE_STYLE} text={formattedBalance} />
-      </View>
+      </Animated.View>
     </View>
   )
 }

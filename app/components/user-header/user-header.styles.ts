@@ -21,7 +21,8 @@ export const userHeaderStyles = {
   } as ViewStyle,
   RIGHT_CONTAINER: {
     alignItems: 'flex-end',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    marginRight: -10
   } as ViewStyle,
   IMAGE_LAYOUT: {
     width: IMAGE_SIZE,
