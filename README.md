@@ -1,10 +1,8 @@
-# TillTransactionsApp
+# Transactions Demo
 
-[![CircleCI](https://circleci.com/gh/infinitered/ignite-bowser.svg?style=svg)](https://circleci.com/gh/infinitered/ignite-bowser)
+## A Project for Exploring Skills
 
-## The latest and greatest boilerplate for Infinite Red opinions
-
-This is the boilerplate that [Infinite Red](https://infinite.red) uses as a way to test bleeding-edge changes to our React Native stack.
+Using the base of Ignite, a stack I'm familiar with from previous work, I built this project with technologies that I would use in a production application.
 
 Currently includes:
 
@@ -14,12 +12,23 @@ Currently includes:
 - TypeScript
 - And more!
 
+## Why Ignite
+
+Beyond familiarity with the stack, Ignite provides a basis of helpers that allow for rapid prototyping with robustness. For example:
+
+- Storybook to explore components as I build them.
+- Pre-configured with powerful debugging tools such as Reactotron/Flipper
+- Core reusable components readily available (eg, Screen).
+- Code generators to rapidly scaffold new elements of the app.
+
+Along with the support of the React community.
+
 ## Quick Start
 
-The Ignite Bowser boilerplate project's structure will look similar to this:
+The project's structure looks similar to this:
 
 ```
-ignite-project
+Transactions Demo
 ├── app
 │   ├── components
 │   ├── i18n
@@ -87,19 +96,19 @@ app
 ```
 
 **components**
-This is where your React components will live. Each component will have a directory containing the `.tsx` file, along with a story file, and optionally `.presets`, and `.props` files for larger components. The app will come with some commonly used components like Button.
+This is where the React components will live. Each component will have a directory containing the `.tsx` file, along with a story file, and optionally `.presets`, and `.props` files for larger components. The app will come with some commonly used components like Button.
 
 **i18n**
-This is where your translations will live if you are using `react-native-i18n`.
+This is where the translations will live if you are using `react-native-i18n`.
 
 **models**
-This is where your app's models will live. Each model has a directory which will contain the `mobx-state-tree` model file, test file, and any other supporting files like actions, types, etc.
+This is where the app's models will live. Each model has a directory which will contain the `mobx-state-tree` model file, test file, and any other supporting files like actions, types, etc.
 
 **navigation**
-This is where your `react-navigation` navigators will live.
+This is where the `react-navigation` navigators will live.
 
 **screens**
-This is where your screen components will live. A screen is a React component which will take up the entire screen and be part of the navigation hierarchy. Each screen will have a directory containing the `.tsx` file, along with any assets or other helper files.
+This is where the screen components will live. A screen is a React component which will take up the entire screen and be part of the navigation hierarchy. Each screen will have a directory containing the `.tsx` file, along with any assets or other helper files.
 
 **services**
 Any services that interface with the outside world will live here (think REST APIs, Push Notifications, etc.).
@@ -118,7 +127,7 @@ The `ignite` directory stores all things Ignite, including CLI and boilerplate i
 
 ### ./storybook directory
 
-This is where your stories will be registered and where the Storybook configs will live
+This is where the stories will be registered and where the Storybook configs will live
 
 ### ./test directory
 
@@ -132,12 +141,3 @@ This starts up the storybook server.
 In `app/app.tsx`, change `SHOW_STORYBOOK` to `true` and reload the app.
 
 For Visual Studio Code users, there is a handy extension that makes it easy to load Storybook use cases into a running emulator via tapping on items in the editor sidebar. Install the `React Native Storybook` extension by `Orta`, hit `cmd + shift + P` and select "Reconnect Storybook to VSCode". Expand the STORYBOOK section in the sidebar to see all use cases for components that have `.story.tsx` files in their directories.
-
-## Previous Boilerplates
-
-- [2017 aka Andross](https://github.com/infinitered/ignite-andross)
-- [2016 aka Ignite 1.0](https://github.com/infinitered/ignite-ir-boilerplate-2016)
-
-## Premium Support
-
-[Ignite CLI](https://infinite.red/ignite), [Ignite Andross](https://github.com/infinitered/ignite-andross), and [Ignite Bowser](https://github.com/infinitered/ignite-bowser), as open source projects, are free to use and always will be. [Infinite Red](https://infinite.red/) offers premium Ignite support and general mobile app design/development services. Email us at [hello@infinite.red](mailto:hello@infinite.red) to get in touch with us for more details.
