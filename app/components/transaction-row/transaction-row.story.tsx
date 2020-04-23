@@ -20,7 +20,7 @@ storiesOf("TransactionRow", module)
   .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
   .add("Style Presets", () => (
     <Story>
-      <UseCase text="Primary" usage="The primary.">
+      <UseCase text="Primary" usage="Display the data of a Transaction with minimal usage of space. Visually represents the transaction type by use of (red) and green colors.">
         <TransactionRow transaction={mockTransaction} />
       </UseCase>
     </Story>

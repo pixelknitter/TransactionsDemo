@@ -10,9 +10,9 @@ storiesOf("AsyncImage", module)
   .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
   .add("Style Presets", () => (
     <Story>
-      <UseCase text="Primary" usage="The primary.">
+      <UseCase text="Primary" usage="Provide a source and placeholder color, this will load the image asynchronously with an animation.">
         <AsyncImage
-          source={{ uri: '' }}
+          source={{ uri: 'http://www.fillmurray.com/200/200' }}
           placeholderColor={color.palette.tealBlue}
         />
       </UseCase>
