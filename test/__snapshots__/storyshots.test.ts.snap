@@ -1,5 +1,152 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots AsyncImage Style Presets 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+        "flex": 1,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                Primary
+              </Text>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#666",
+                  "fontSize": 10,
+                  "paddingTop": 0,
+                }
+              }
+            >
+              Provide a source and placeholder color, this will load the image asynchronously with an animation.
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#fff",
+                "padding": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Image
+                onLoad={[Function]}
+                resizeMode="contain"
+                source={
+                  Object {
+                    "uri": "http://www.fillmurray.com/200/200",
+                  }
+                }
+                style={
+                  Object {
+                    "opacity": 0,
+                    "position": "absolute",
+                  }
+                }
+              />
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#1B9AAA",
+                    "opacity": 1,
+                    "position": "absolute",
+                    "transform": Array [
+                      Object {
+                        "scale": 1,
+                      },
+                    ],
+                  }
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
 exports[`Storyshots Button Style Presets 1`] = `
 <View
   onLayout={[Function]}
@@ -3473,7 +3620,7 @@ exports[`Storyshots Switch Behaviour 1`] = `
               <View
                 style={
                   Object {
-                    "backgroundColor": "#ffffff",
+                    "backgroundColor": "#223843",
                     "borderColor": "rgba(0, 0, 0, 0.1)",
                     "borderRadius": 15,
                     "borderWidth": 1,
@@ -3601,7 +3748,7 @@ exports[`Storyshots Switch Behaviour 1`] = `
               <View
                 style={
                   Object {
-                    "backgroundColor": "#ffffff",
+                    "backgroundColor": "#223843",
                     "borderColor": "rgba(0, 0, 0, 0.1)",
                     "borderRadius": 15,
                     "borderWidth": 1,
@@ -3729,7 +3876,7 @@ exports[`Storyshots Switch Behaviour 1`] = `
               <View
                 style={
                   Object {
-                    "backgroundColor": "#ffffff",
+                    "backgroundColor": "#223843",
                     "borderColor": "rgba(0, 0, 0, 0.1)",
                     "borderRadius": 15,
                     "borderWidth": 1,
@@ -5884,6 +6031,405 @@ exports[`Storyshots TextField Style Overrides 1`] = `
             >
               * attention designers:  i am so sorry
             </Text>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
+exports[`Storyshots TransactionRow Style Presets 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+        "flex": 1,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                Primary
+              </Text>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#666",
+                  "fontSize": 10,
+                  "paddingTop": 0,
+                }
+              }
+            >
+              Display the data of a Transaction with minimal usage of space. Visually represents the transaction type by use of (red) and green colors.
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#fff",
+                "padding": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignContent": "space-between",
+                  "alignItems": "center",
+                  "backgroundColor": "#004040",
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "margin": 2,
+                  "padding": 8,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flexDirection": "column",
+                    "flexGrow": 1,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "color": "#e6e6e6",
+                        "fontFamily": "Montserrat",
+                        "fontSize": 18,
+                        "fontWeight": "300",
+                      }
+                    }
+                  >
+                    04-22
+                  </Text>
+                  <Text
+                    style={
+                      Object {
+                        "color": "#e6e6e6",
+                        "fontFamily": "Montserrat",
+                        "fontSize": 18,
+                        "fontWeight": "bold",
+                        "marginLeft": 8,
+                      }
+                    }
+                  >
+                    Merchant
+                  </Text>
+                </View>
+                <Text
+                  style={
+                    Object {
+                      "color": "#e6e6e6",
+                      "fontFamily": "Montserrat",
+                      "fontSize": 14,
+                      "marginTop": 8,
+                    }
+                  }
+                >
+                  some details that should be known?
+                </Text>
+              </View>
+              <Text
+                style={
+                  Object {
+                    "alignSelf": "flex-start",
+                    "color": "#FC5130",
+                    "fontFamily": "Montserrat",
+                    "fontSize": 18,
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                (12.52)
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
+exports[`Storyshots UserHeader Style Presets 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#f0f0f0",
+        "flex": 1,
+      },
+      Object {
+        "paddingBottom": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#eee",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "borderBottomColor": "#e6e6e6",
+                "borderBottomWidth": 1,
+                "paddingBottom": 10,
+                "paddingHorizontal": 10,
+                "paddingTop": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderTopColor": "#e6e6e6",
+                  "borderTopWidth": 1,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#666",
+                    "fontSize": 10,
+                    "paddingBottom": 2,
+                    "paddingHorizontal": 4,
+                  }
+                }
+              >
+                Use Case
+              </Text>
+            </View>
+            <View
+              style={Object {}}
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#3d3d3d",
+                    "fontWeight": "600",
+                  }
+                }
+              >
+                Primary
+              </Text>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#666",
+                  "fontSize": 10,
+                  "paddingTop": 0,
+                }
+              }
+            >
+              Displays the avatar, name, and current balance of the user.
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "#fff",
+                "padding": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "backgroundColor": "#223843",
+                  "flexDirection": "row",
+                  "height": 100,
+                  "justifyContent": "space-between",
+                  "padding": 12,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 40,
+                    "height": 80,
+                    "justifyContent": "center",
+                    "marginRight": 8,
+                    "width": 80,
+                  }
+                }
+              >
+                <Image
+                  onLoad={[Function]}
+                  resizeMode="contain"
+                  source={
+                    Object {
+                      "uri": "http://www.fillmurray.com/200/200",
+                    }
+                  }
+                  style={
+                    Object {
+                      "borderRadius": 40,
+                      "height": 80,
+                      "marginRight": 8,
+                      "opacity": 0,
+                      "position": "absolute",
+                      "width": 80,
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#1B9AAA",
+                      "borderRadius": 40,
+                      "height": 80,
+                      "marginRight": 8,
+                      "opacity": 1,
+                      "position": "absolute",
+                      "transform": Array [
+                        Object {
+                          "scale": 1,
+                        },
+                      ],
+                      "width": 80,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "justifyContent": "space-between",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Montserrat",
+                      "fontSize": 24,
+                      "fontWeight": "bold",
+                    }
+                  }
+                >
+                  Simon Garfunkle
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Montserrat",
+                      "fontSize": 24,
+                      "fontWeight": "500",
+                    }
+                  }
+                >
+                  $1,202
+                </Text>
+              </View>
+            </View>
           </View>
         </View>
       </View>

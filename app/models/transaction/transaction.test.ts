@@ -1,15 +1,29 @@
-import { parse } from "date-fns"
 import { v1 as uuid } from "uuid"
 import { TransactionModel, Transaction } from "./transaction"
 
-test("can be created", () => {
-  const instance: Transaction = TransactionModel.create({
-    id: uuid(),
-    merchant: "Till, Inc.",
-    date: parse("2019-01-15", "yyyy-MM-dd", new Date()),
-    amount: 1000000,
-    type: "credit",
-  })
+describe("Transaction", () => {
+  describe("smoke tests", () => {
+    test("can be created", () => {
+      const instance: Transaction = TransactionModel.create({
+        id: uuid(),
+        merchant: "Till, Inc.",
+        date: new Date(),
+        amount: 1000000,
+        type: "credit",
+      })
 
-  expect(instance).toBeTruthy()
+      expect(instance).toBeTruthy()
+    })
+
+    test("has correct defaults", () => {
+      const instance: Transaction = TransactionModel.create({})
+
+      expect(instance.id).toEqual("-1")
+      expect(instance.date).toBeNull()
+      expect(instance.merchant).toBeNull()
+      expect(instance.amount).toBeNull()
+      expect(instance.type).toBeNull()
+      expect(instance.details).toBeNull()
+    })
+  })
 })

@@ -24,8 +24,8 @@ export const TransactionStoreModel = types
      */
     saveTransactions: (transactionSnapshots: TransactionSnapshot[], associatedUserId: string) => {
       // TODO: add additional support for pagination
-      // Set the associated User ID if it doesn't exist
-      if (!self.associatedUserId) {
+      // Set the associated User ID if it's default
+      if (self.associatedUserId === "-1") {
         self.associatedUserId = associatedUserId
       }
       // Map the snapshot to the transactions list
@@ -45,8 +45,8 @@ export const TransactionStoreModel = types
     saveTransaction: (transactionSnapshot: TransactionSnapshot | Transaction, associatedUserId: string) => {
       const { currentUser, updateBalance } = self.rootStore.userStore
 
-      // Set the associated User ID if it doesn't exist
-      if (!self.associatedUserId) {
+      // Set the associated User ID if it's default
+      if (self.associatedUserId === "-1") {
         self.associatedUserId = associatedUserId
       }
 
