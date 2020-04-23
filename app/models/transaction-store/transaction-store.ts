@@ -3,6 +3,9 @@ import { TransactionModel, TransactionSnapshot, Transaction } from "../transacti
 import { GetUserResult } from '../../services/api'
 import { withEnvironment } from '../extensions'
 import { withRootStore } from '../extensions/with-root-store'
+import { compareDesc } from "date-fns"
+
+export type SectionedTransactions = { title: string, data: Transaction[] }
 
 /**
  * Model description here for TypeScript hints.
@@ -15,7 +18,6 @@ export const TransactionStoreModel = types
   })
   .extend(withEnvironment)
   .extend(withRootStore)
-  .views(self => ({})) // eslint-disable-line @typescript-eslint/no-unused-vars
   .actions(self => ({
     /**
      * Save a collection of transactions to a user
@@ -68,6 +70,36 @@ export const TransactionStoreModel = types
         __DEV__ && console.tron.log(result.kind)
       }
     }),
+  }))
+  .views(self => ({
+    /**
+     * Returns a descending ordered sectional array of transactions by year (useful for SectionLists)
+     */
+    formatForSectionsByYear: (): SectionedTransactions[] => {
+      // pre-sort for simpler insertion
+      const sortedData = self.transactions.sort((a, b) => compareDesc(a.date, b.date))
+
+      // organize the data into years
+      const yearMap = {}
+      sortedData.forEach((item) => {
+        const itemYear = item.date.getFullYear().toString()
+
+        // check to see if the year already exists in the map
+        // if not create one, otherwise add to the year
+        if (!yearMap[itemYear]) {
+          yearMap[itemYear] = [item]
+        } else {
+          yearMap[itemYear].push(item)
+        }
+      })
+
+      // map the year and data to expected format of SectionedTransactions
+      return Object.keys(yearMap)
+        // create the sectional objects
+        .map((year) => ({ title: year, data: yearMap[year] }))
+        // make sure the most recent year is first (descending order)
+        .sort((a, b) => (a.title < b.title ? 1 : a.title === b.title ? 0 : -1))
+    }
   }))
 
 /**

@@ -5,7 +5,7 @@
   "transactions": [
     {
       "merchant": "Starbucks",
-      "date": "2019-01-02",
+      "date": "2020-01-02",
       "amount": 4.67,
       "type": "debit"
     },
@@ -65,14 +65,14 @@
     },
     {
       "merchant": "Medicare For All",
-      "date": "2019-04-21",
+      "date": "2020-04-21",
       "amount": 5002,
       "type": "debit",
       "details": "Charity"
     },
     {
       "merchant": "Doctors Without Borders",
-      "date": "2019-05-01",
+      "date": "2020-05-01",
       "amount": 5000.52,
       "type": "debit",
       "details": "Charity"
@@ -86,7 +86,7 @@
     },
     {
       "merchant": "Good Actor Inc",
-      "date": "2019-02-05",
+      "date": "2020-02-05",
       "amount": 500,
       "type": "credit",
       "details": "paid for acting"
