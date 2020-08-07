@@ -2,6 +2,7 @@
 import "react-native"
 
 // libraries to mock
+import "./mock-animation"
 import "./mock-async-storage"
 import "./mock-i18n"
 import "./mock-react-native-localize"
