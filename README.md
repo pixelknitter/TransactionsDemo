@@ -1,8 +1,16 @@
 # Transactions Demo
 
+This application creates a transactions list with different types of accounting capability and organizes it in chronological order indepedentent of how the data is received. The data is pre-defined for simplicity, but could easily be expanded upon to include user input of transactions.
+
+This project has fully tested models and actions with snapshots for visual regressions.
+
 ## A Project for Exploring Skills
 
 Using the base of Ignite, a stack I'm familiar with from previous work, I built this project with technologies that I would use in a production application.
+
+What it doesn't do:
+
+- Explore the usage of APIs as the data is embedded
 
 Currently includes:
 
@@ -17,7 +25,7 @@ Currently includes:
 Beyond familiarity with the stack, Ignite provides a basis of helpers that allow for rapid prototyping with robustness. For example:
 
 - Storybook to explore components as I build them.
-- Pre-configured with powerful debugging tools such as Reactotron/Flipper
+- Pre-configured with powerful debugging tools such as Reactotron/Flipper.
 - Core reusable components readily available (eg, Screen).
 - Code generators to rapidly scaffold new elements of the app.
 
