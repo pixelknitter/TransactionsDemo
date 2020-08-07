@@ -6154,7 +6154,7 @@ exports[`Storyshots TransactionRow Style Presets 1`] = `
                   "padding": 8,
                   "transform": Array [
                     Object {
-                      "translateX": 375,
+                      "translateX": 875,
                     },
                   ],
                 }
@@ -6187,7 +6187,7 @@ exports[`Storyshots TransactionRow Style Presets 1`] = `
                       }
                     }
                   >
-                    04-23
+                    08-07
                   </Text>
                   <Text
                     style={
