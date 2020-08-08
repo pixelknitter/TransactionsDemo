@@ -2,7 +2,7 @@
 
 This application creates a transactions list with different types of accounting capability and organizes it in chronological order indepedentent of how the data is received. The data is pre-defined for simplicity, but could easily be expanded upon to include user input of transactions.
 
-This project has fully tested models and actions with snapshots for visual regressions.
+This project has fully tested models and actions with snapshots for visual regressions. It was built in a couple days as a demonstration.
 
 ## A Project for Exploring Skills
 
