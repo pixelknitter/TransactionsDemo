@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* TillTransactionsAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TillTransactionsAppTests.m */; };
+		00E356F31AD99517003FC87E /* TransactionsAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TransactionsAppTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -15,11 +15,11 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* TillTransactionsAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TillTransactionsAppTests.m */; };
-		694BE7391D33FD58EAB87D21 /* libPods-TillTransactionsApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ECBC8D16476957F0F84C6E /* libPods-TillTransactionsApp-tvOS.a */; };
-		95968BC81DFF27F441EA1639 /* libPods-TillTransactionsApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA6A42A0BD3EB7F75357C31 /* libPods-TillTransactionsApp.a */; };
-		A35D4B964888F276B826E9BF /* libPods-TillTransactionsApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8874744BAE1D302F557F1B /* libPods-TillTransactionsApp-tvOSTests.a */; };
-		BA1969514F23274ECB0C0F5A /* libPods-TillTransactionsAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA647E1AB5BD63C9D14BB4CC /* libPods-TillTransactionsAppTests.a */; };
+		2DCD954D1E0B4F2C00145EB5 /* TransactionsAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TransactionsAppTests.m */; };
+		694BE7391D33FD58EAB87D21 /* libPods-TransactionsApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ECBC8D16476957F0F84C6E /* libPods-TransactionsApp-tvOS.a */; };
+		95968BC81DFF27F441EA1639 /* libPods-TransactionsApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA6A42A0BD3EB7F75357C31 /* libPods-TransactionsApp.a */; };
+		A35D4B964888F276B826E9BF /* libPods-TransactionsApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8874744BAE1D302F557F1B /* libPods-TransactionsApp-tvOSTests.a */; };
+		BA1969514F23274ECB0C0F5A /* libPods-TransactionsAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA647E1AB5BD63C9D14BB4CC /* libPods-TransactionsAppTests.a */; };
 		6388A2C26ED747C6A9550097 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A22E91EA1E3D48D293C4534D /* Montserrat-Black.ttf */; };
 		90BBDF60806447F6964D8691 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 070500B91548447396284CA8 /* Montserrat-BlackItalic.ttf */; };
 		7357B1F846D047F2A1DEA2F5 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B52DA1999D3B415C98EABAAA /* Montserrat-Bold.ttf */; };
@@ -46,45 +46,45 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = TillTransactionsApp;
+			remoteInfo = TransactionsApp;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "TillTransactionsApp-tvOS";
+			remoteInfo = "TransactionsApp-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* TillTransactionsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TillTransactionsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* TransactionsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* TillTransactionsAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TillTransactionsAppTests.m; sourceTree = "<group>"; };
-		04E72B238147C8AA81A8D1F8 /* Pods-TillTransactionsApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TillTransactionsApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-TillTransactionsApp-tvOSTests/Pods-TillTransactionsApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		09D4FFA6503B9E308833CC7F /* Pods-TillTransactionsApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TillTransactionsApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-TillTransactionsApp-tvOS/Pods-TillTransactionsApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* TillTransactionsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TillTransactionsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TillTransactionsApp/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TillTransactionsApp/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* TransactionsAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionsAppTests.m; sourceTree = "<group>"; };
+		04E72B238147C8AA81A8D1F8 /* Pods-TransactionsApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsApp-tvOSTests/Pods-TransactionsApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		09D4FFA6503B9E308833CC7F /* Pods-TransactionsApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-TransactionsApp-tvOS/Pods-TransactionsApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* TransactionsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TransactionsApp/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TransactionsApp/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TillTransactionsApp/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TillTransactionsApp/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TillTransactionsApp/main.m; sourceTree = "<group>"; };
-		15FA59FB09F9E9C2512C5B80 /* Pods-TillTransactionsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TillTransactionsAppTests.release.xcconfig"; path = "Target Support Files/Pods-TillTransactionsAppTests/Pods-TillTransactionsAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		18ECBC8D16476957F0F84C6E /* libPods-TillTransactionsApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TillTransactionsApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E47B1E0B4A5D006451C7 /* TillTransactionsApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TillTransactionsApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* TillTransactionsApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TillTransactionsApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4971778816A2BEB53EDFD72F /* Pods-TillTransactionsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TillTransactionsApp.debug.xcconfig"; path = "Target Support Files/Pods-TillTransactionsApp/Pods-TillTransactionsApp.debug.xcconfig"; sourceTree = "<group>"; };
-		97F31364652E2A2DA537E2C0 /* Pods-TillTransactionsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TillTransactionsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TillTransactionsAppTests/Pods-TillTransactionsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		ACA6A42A0BD3EB7F75357C31 /* libPods-TillTransactionsApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TillTransactionsApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4F7B3246F29D33E3FAAE6DF /* Pods-TillTransactionsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TillTransactionsApp.release.xcconfig"; path = "Target Support Files/Pods-TillTransactionsApp/Pods-TillTransactionsApp.release.xcconfig"; sourceTree = "<group>"; };
-		CF8874744BAE1D302F557F1B /* libPods-TillTransactionsApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TillTransactionsApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA2FD45CF7049689776677F1 /* Pods-TillTransactionsApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TillTransactionsApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-TillTransactionsApp-tvOSTests/Pods-TillTransactionsApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TransactionsApp/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TransactionsApp/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TransactionsApp/main.m; sourceTree = "<group>"; };
+		15FA59FB09F9E9C2512C5B80 /* Pods-TransactionsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsAppTests.release.xcconfig"; path = "Target Support Files/Pods-TransactionsAppTests/Pods-TransactionsAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		18ECBC8D16476957F0F84C6E /* libPods-TransactionsApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TransactionsApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* TransactionsApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TransactionsApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* TransactionsApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TransactionsApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4971778816A2BEB53EDFD72F /* Pods-TransactionsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsApp.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsApp/Pods-TransactionsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		97F31364652E2A2DA537E2C0 /* Pods-TransactionsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsAppTests/Pods-TransactionsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACA6A42A0BD3EB7F75357C31 /* libPods-TransactionsApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TransactionsApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4F7B3246F29D33E3FAAE6DF /* Pods-TransactionsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsApp.release.xcconfig"; path = "Target Support Files/Pods-TransactionsApp/Pods-TransactionsApp.release.xcconfig"; sourceTree = "<group>"; };
+		CF8874744BAE1D302F557F1B /* libPods-TransactionsApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TransactionsApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA2FD45CF7049689776677F1 /* Pods-TransactionsApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-TransactionsApp-tvOSTests/Pods-TransactionsApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F0EFFCAA83238BC37C4F51F6 /* Pods-TillTransactionsApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TillTransactionsApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-TillTransactionsApp-tvOS/Pods-TillTransactionsApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		FA647E1AB5BD63C9D14BB4CC /* libPods-TillTransactionsAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TillTransactionsAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0EFFCAA83238BC37C4F51F6 /* Pods-TransactionsApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransactionsApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-TransactionsApp-tvOS/Pods-TransactionsApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		FA647E1AB5BD63C9D14BB4CC /* libPods-TransactionsAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TransactionsAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A22E91EA1E3D48D293C4534D /* Montserrat-Black.ttf */ = {isa = PBXFileReference; name = "Montserrat-Black.ttf"; path = "../app/theme/fonts/Montserrat-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		070500B91548447396284CA8 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Montserrat-BlackItalic.ttf"; path = "../app/theme/fonts/Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		B52DA1999D3B415C98EABAAA /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; name = "Montserrat-Bold.ttf"; path = "../app/theme/fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
@@ -110,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA1969514F23274ECB0C0F5A /* libPods-TillTransactionsAppTests.a in Frameworks */,
+				BA1969514F23274ECB0C0F5A /* libPods-TransactionsAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95968BC81DFF27F441EA1639 /* libPods-TillTransactionsApp.a in Frameworks */,
+				95968BC81DFF27F441EA1639 /* libPods-TransactionsApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				694BE7391D33FD58EAB87D21 /* libPods-TillTransactionsApp-tvOS.a in Frameworks */,
+				694BE7391D33FD58EAB87D21 /* libPods-TransactionsApp-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,20 +134,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A35D4B964888F276B826E9BF /* libPods-TillTransactionsApp-tvOSTests.a in Frameworks */,
+				A35D4B964888F276B826E9BF /* libPods-TransactionsApp-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* TillTransactionsAppTests */ = {
+		00E356EF1AD99517003FC87E /* TransactionsAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* TillTransactionsAppTests.m */,
+				00E356F21AD99517003FC87E /* TransactionsAppTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = TillTransactionsAppTests;
+			path = TransactionsAppTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -158,7 +158,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* TillTransactionsApp */ = {
+		13B07FAE1A68108700A75B9A /* TransactionsApp */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -169,7 +169,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = TillTransactionsApp;
+			name = TransactionsApp;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -177,10 +177,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				ACA6A42A0BD3EB7F75357C31 /* libPods-TillTransactionsApp.a */,
-				18ECBC8D16476957F0F84C6E /* libPods-TillTransactionsApp-tvOS.a */,
-				CF8874744BAE1D302F557F1B /* libPods-TillTransactionsApp-tvOSTests.a */,
-				FA647E1AB5BD63C9D14BB4CC /* libPods-TillTransactionsAppTests.a */,
+				ACA6A42A0BD3EB7F75357C31 /* libPods-TransactionsApp.a */,
+				18ECBC8D16476957F0F84C6E /* libPods-TransactionsApp-tvOS.a */,
+				CF8874744BAE1D302F557F1B /* libPods-TransactionsApp-tvOSTests.a */,
+				FA647E1AB5BD63C9D14BB4CC /* libPods-TransactionsAppTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,14 +188,14 @@
 		4CDB145B6351F626593EE015 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4971778816A2BEB53EDFD72F /* Pods-TillTransactionsApp.debug.xcconfig */,
-				B4F7B3246F29D33E3FAAE6DF /* Pods-TillTransactionsApp.release.xcconfig */,
-				F0EFFCAA83238BC37C4F51F6 /* Pods-TillTransactionsApp-tvOS.debug.xcconfig */,
-				09D4FFA6503B9E308833CC7F /* Pods-TillTransactionsApp-tvOS.release.xcconfig */,
-				04E72B238147C8AA81A8D1F8 /* Pods-TillTransactionsApp-tvOSTests.debug.xcconfig */,
-				DA2FD45CF7049689776677F1 /* Pods-TillTransactionsApp-tvOSTests.release.xcconfig */,
-				97F31364652E2A2DA537E2C0 /* Pods-TillTransactionsAppTests.debug.xcconfig */,
-				15FA59FB09F9E9C2512C5B80 /* Pods-TillTransactionsAppTests.release.xcconfig */,
+				4971778816A2BEB53EDFD72F /* Pods-TransactionsApp.debug.xcconfig */,
+				B4F7B3246F29D33E3FAAE6DF /* Pods-TransactionsApp.release.xcconfig */,
+				F0EFFCAA83238BC37C4F51F6 /* Pods-TransactionsApp-tvOS.debug.xcconfig */,
+				09D4FFA6503B9E308833CC7F /* Pods-TransactionsApp-tvOS.release.xcconfig */,
+				04E72B238147C8AA81A8D1F8 /* Pods-TransactionsApp-tvOSTests.debug.xcconfig */,
+				DA2FD45CF7049689776677F1 /* Pods-TransactionsApp-tvOSTests.release.xcconfig */,
+				97F31364652E2A2DA537E2C0 /* Pods-TransactionsAppTests.debug.xcconfig */,
+				15FA59FB09F9E9C2512C5B80 /* Pods-TransactionsAppTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -211,9 +211,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* TillTransactionsApp */,
+				13B07FAE1A68108700A75B9A /* TransactionsApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* TillTransactionsAppTests */,
+				00E356EF1AD99517003FC87E /* TransactionsAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				4CDB145B6351F626593EE015 /* Pods */,
@@ -227,10 +227,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* TillTransactionsApp.app */,
-				00E356EE1AD99517003FC87E /* TillTransactionsAppTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* TillTransactionsApp-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* TillTransactionsApp-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* TransactionsApp.app */,
+				00E356EE1AD99517003FC87E /* TransactionsAppTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* TransactionsApp-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* TransactionsApp-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,9 +264,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* TillTransactionsAppTests */ = {
+		00E356ED1AD99517003FC87E /* TransactionsAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TillTransactionsAppTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TransactionsAppTests" */;
 			buildPhases = (
 				39C9FFE778DA23DAF77DA34A /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -278,14 +278,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = TillTransactionsAppTests;
-			productName = TillTransactionsAppTests;
-			productReference = 00E356EE1AD99517003FC87E /* TillTransactionsAppTests.xctest */;
+			name = TransactionsAppTests;
+			productName = TransactionsAppTests;
+			productReference = 00E356EE1AD99517003FC87E /* TransactionsAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* TillTransactionsApp */ = {
+		13B07F861A680F5B00A75B9A /* TransactionsApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TillTransactionsApp" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TransactionsApp" */;
 			buildPhases = (
 				9ADA3F3306516ACD5D943CF6 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -298,14 +298,14 @@
 			);
 			dependencies = (
 			);
-			name = TillTransactionsApp;
-			productName = TillTransactionsApp;
-			productReference = 13B07F961A680F5B00A75B9A /* TillTransactionsApp.app */;
+			name = TransactionsApp;
+			productName = TransactionsApp;
+			productReference = 13B07F961A680F5B00A75B9A /* TransactionsApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* TillTransactionsApp-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* TransactionsApp-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "TillTransactionsApp-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "TransactionsApp-tvOS" */;
 			buildPhases = (
 				7FCAA99E73C6E10349488E49 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
@@ -318,14 +318,14 @@
 			);
 			dependencies = (
 			);
-			name = "TillTransactionsApp-tvOS";
-			productName = "TillTransactionsApp-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* TillTransactionsApp-tvOS.app */;
+			name = "TransactionsApp-tvOS";
+			productName = "TransactionsApp-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* TransactionsApp-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* TillTransactionsApp-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* TransactionsApp-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "TillTransactionsApp-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "TransactionsApp-tvOSTests" */;
 			buildPhases = (
 				2ED36C072384E73EFC37DAB5 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
@@ -337,9 +337,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "TillTransactionsApp-tvOSTests";
-			productName = "TillTransactionsApp-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* TillTransactionsApp-tvOSTests.xctest */;
+			name = "TransactionsApp-tvOSTests";
+			productName = "TransactionsApp-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* TransactionsApp-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -366,7 +366,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "TillTransactionsApp" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "TransactionsApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -379,10 +379,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* TillTransactionsApp */,
-				00E356ED1AD99517003FC87E /* TillTransactionsAppTests */,
-				2D02E47A1E0B4A5D006451C7 /* TillTransactionsApp-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* TillTransactionsApp-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* TransactionsApp */,
+				00E356ED1AD99517003FC87E /* TransactionsAppTests */,
+				2D02E47A1E0B4A5D006451C7 /* TransactionsApp-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* TransactionsApp-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -483,7 +483,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TillTransactionsApp-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TransactionsApp-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -505,7 +505,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TillTransactionsAppTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TransactionsAppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -527,7 +527,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TillTransactionsApp-tvOS-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TransactionsApp-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -549,7 +549,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TillTransactionsApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TransactionsApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -601,7 +601,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* TillTransactionsAppTests.m in Sources */,
+				00E356F31AD99517003FC87E /* TransactionsAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,7 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* TillTransactionsAppTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* TransactionsAppTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,12 +636,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* TillTransactionsApp */;
+			target = 13B07F861A680F5B00A75B9A /* TransactionsApp */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* TillTransactionsApp-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* TransactionsApp-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -653,7 +653,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = TillTransactionsApp;
+			path = TransactionsApp;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -661,14 +661,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97F31364652E2A2DA537E2C0 /* Pods-TillTransactionsAppTests.debug.xcconfig */;
+			baseConfigurationReference = 97F31364652E2A2DA537E2C0 /* Pods-TransactionsAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = TillTransactionsAppTests/Info.plist;
+				INFOPLIST_FILE = TransactionsAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -678,17 +678,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TillTransactionsApp.app/TillTransactionsApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransactionsApp.app/TransactionsApp";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15FA59FB09F9E9C2512C5B80 /* Pods-TillTransactionsAppTests.release.xcconfig */;
+			baseConfigurationReference = 15FA59FB09F9E9C2512C5B80 /* Pods-TransactionsAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = TillTransactionsAppTests/Info.plist;
+				INFOPLIST_FILE = TransactionsAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -698,18 +698,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TillTransactionsApp.app/TillTransactionsApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransactionsApp.app/TransactionsApp";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4971778816A2BEB53EDFD72F /* Pods-TillTransactionsApp.debug.xcconfig */;
+			baseConfigurationReference = 4971778816A2BEB53EDFD72F /* Pods-TransactionsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				INFOPLIST_FILE = TillTransactionsApp/Info.plist;
+				INFOPLIST_FILE = TransactionsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -717,18 +717,18 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = TillTransactionsApp;
+				PRODUCT_NAME = TransactionsApp;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4F7B3246F29D33E3FAAE6DF /* Pods-TillTransactionsApp.release.xcconfig */;
+			baseConfigurationReference = B4F7B3246F29D33E3FAAE6DF /* Pods-TransactionsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = TillTransactionsApp/Info.plist;
+				INFOPLIST_FILE = TransactionsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -736,14 +736,14 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = TillTransactionsApp;
+				PRODUCT_NAME = TransactionsApp;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0EFFCAA83238BC37C4F51F6 /* Pods-TillTransactionsApp-tvOS.debug.xcconfig */;
+			baseConfigurationReference = F0EFFCAA83238BC37C4F51F6 /* Pods-TransactionsApp-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -754,14 +754,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "TillTransactionsApp-tvOS/Info.plist";
+				INFOPLIST_FILE = "TransactionsApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.TillTransactionsApp-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.TransactionsApp-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -771,7 +771,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09D4FFA6503B9E308833CC7F /* Pods-TillTransactionsApp-tvOS.release.xcconfig */;
+			baseConfigurationReference = 09D4FFA6503B9E308833CC7F /* Pods-TransactionsApp-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -782,14 +782,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "TillTransactionsApp-tvOS/Info.plist";
+				INFOPLIST_FILE = "TransactionsApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.TillTransactionsApp-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.TransactionsApp-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -799,7 +799,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04E72B238147C8AA81A8D1F8 /* Pods-TillTransactionsApp-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 04E72B238147C8AA81A8D1F8 /* Pods-TransactionsApp-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -809,24 +809,24 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "TillTransactionsApp-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "TransactionsApp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.TillTransactionsApp-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.TransactionsApp-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TillTransactionsApp-tvOS.app/TillTransactionsApp-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransactionsApp-tvOS.app/TransactionsApp-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA2FD45CF7049689776677F1 /* Pods-TillTransactionsApp-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = DA2FD45CF7049689776677F1 /* Pods-TransactionsApp-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -836,17 +836,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "TillTransactionsApp-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "TransactionsApp-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.TillTransactionsApp-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.TransactionsApp-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TillTransactionsApp-tvOS.app/TillTransactionsApp-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransactionsApp-tvOS.app/TransactionsApp-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -953,7 +953,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TillTransactionsAppTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TransactionsAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -962,7 +962,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TillTransactionsApp" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TransactionsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -971,7 +971,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "TillTransactionsApp-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "TransactionsApp-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -980,7 +980,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "TillTransactionsApp-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "TransactionsApp-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -989,7 +989,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "TillTransactionsApp" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "TransactionsApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

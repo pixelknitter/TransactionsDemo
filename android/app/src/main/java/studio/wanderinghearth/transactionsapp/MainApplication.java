@@ -1,4 +1,4 @@
-package com.tilltransactionsapp;
+package studio.wanderinghearth.transactionsapp;
 
 import android.app.Application;
 import android.content.Context;

@@ -62,7 +62,7 @@ describe("TransactionStore", () => {
         transactions = [
           {
             id: uuid(),
-            merchant: "Till, Inc.",
+            merchant: "ACME, Inc.",
             date: new Date().getTime(),
             amount: 1000000,
             type: "credit",

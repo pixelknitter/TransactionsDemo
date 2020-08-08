@@ -1,5 +1,5 @@
 {
-  "name": "Johnny Ray",
+  "name": "Space Ghost",
   "avatar": "https://www.fillmurray.com/200/200",
     "balance": 212,
   "transactions": [
@@ -10,7 +10,7 @@
       "type": "debit"
     },
     {
-      "merchant": "Till, Inc.",
+      "merchant": "ACME, Inc.",
       "date": "2019-01-15",
       "amount": 1000000,
       "type": "credit",

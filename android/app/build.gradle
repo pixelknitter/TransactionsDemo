@@ -143,7 +143,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.tilltransactionsapp"
+        applicationId "studio.wanderinghearth.transactionsapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

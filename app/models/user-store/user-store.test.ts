@@ -68,7 +68,7 @@ describe("UserStore", () => {
     test("can update the balance", () => {
       const mockTransaction = TransactionModel.create({
         id: uuid(),
-        merchant: "Till, Inc.",
+        merchant: "ACME, Inc.",
         date: new Date(),
         amount: 1000000,
         type: "credit",

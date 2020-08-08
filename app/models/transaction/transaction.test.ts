@@ -6,7 +6,7 @@ describe("Transaction", () => {
     test("can be created", () => {
       const instance: Transaction = TransactionModel.create({
         id: uuid(),
-        merchant: "Till, Inc.",
+        merchant: "ACME, Inc.",
         date: new Date(),
         amount: 1000000,
         type: "credit",
