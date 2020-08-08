@@ -4,6 +4,10 @@ This application creates a transactions list with different types of accounting 
 
 This project has fully tested models and actions with snapshots for visual regressions. It was built in a couple days as a demonstration.
 
+## Quick Look
+
+![Transactions Demo - A Quick Look](transactions-app.gif)
+
 ## A Project for Exploring Skills
 
 Using the base of Ignite, a stack I'm familiar with from previous work, I built this project with technologies that I would use in a production application.
