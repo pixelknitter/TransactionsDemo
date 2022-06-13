@@ -41,9 +41,7 @@ const useFadeInLeft = () => {
  *
  * Renders a header with details about the CurrentUser. Accepts a User object.
  */
-export function UserHeader(props: UserHeaderProps) {
-  // grab the props
-  const { user } = props
+export function UserHeader({ user }: UserHeaderProps) {
   const { opacity, xDelta } = useFadeInLeft()
 
   // don't render if the user is null
@@ -63,8 +61,8 @@ export function UserHeader(props: UserHeaderProps) {
   }]))
 
   // conditional helpers
-  const hasBalance = user && user.balance
-  const hasNegativeBalance = hasBalance && user.balance < 0
+  const hasBalance = user?.balance
+  const hasNegativeBalance = user?.balance < 0
 
   // format the balance with comma delimination and a fixed fraction, make it unsigned
   const balanceString = hasBalance && Math.abs(user.balance).toLocaleString(undefined, { maximumFractionDigits: 2 })

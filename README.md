@@ -35,6 +35,43 @@ Beyond familiarity with the stack, Ignite provides a basis of helpers that allow
 
 Along with the support of the React community.
 
+## Further Considerations / Code Review
+
+- test mocking probably didn't need to be separated if they're simply one line. Migrate once they grow larger, otherwise feels like bloat.
+- create `useAnimatedValue` hook that abstracts the common pattern used to create the `ref`
+  - intention: to ensure consistency of the pattern and reduce duplicated Code
+- fix the random delay as it feels off
+  - potential solution: add month section headers in the `FlatList` and load in by months to create a stagger effect
+- take better advantage of optional chaining to reduce the verbosity of code, example:
+
+```typescript
+// verbose
+const hasDetails = transaction.details && transaction.details.length > 0
+// concise
+const hasDetails = transaction?.details?.length > 0
+```
+
+- clean up the type-safety to improve knowing when a value is optional vs required, then add appropriate guards and/or view states to account for the edge cases.
+- migrate to use `StyleSheet.create` pattern to reduce the style management complexity with `ramda`; this also improves style typesafety and intellisense in `VSCode` for a better DX (dev experience)
+- destructure props in function component signature; in most cases this leads to clearer function bodies and less code (see `user-header.tsx` for example)
+- fix MST store type-safety, a few default to `any`
+  - strategy: enable strict-mode in linter (not allowing `any` type) and resolve errors
+- update the project so it can run properly in newer environments. It currently fails to compile on newer versions of iOS and Node.
+- enforce using `import type` patterns with lint-rules to safeguard against edge-case problems and improved optimizations
+  - see example of usage in `transaction-store.ts`
+  - see a decent write-up/summary of benefits on [stackoverflow](https://stackoverflow.com/questions/61412000/do-i-need-to-use-the-import-type-feature-of-typescript-3-8-if-all-of-my-import) with reference to documentation
+- migrate away from `index.ts` export modules for root folders as it can lead to import require cycles.
+  - potential strategy: employ absolute path import aliases to reduce messy nesting and improve readability (see example from [nextjs docs](https://nextjs.org/docs/advanced-features/module-path-aliases))
+  - alternative strategy: move common imports into private modules that are managed with your package manager
+- in most cases, `async` `await` statements could be within a `try/catch` block avoiding less readable promise-chaining
+- avoid single character variable names where it may cause confusion (see `transaction-store.ts`)
+- strongly define types for view state that has ambiguous types based upon the inital value to avoid confusion and potential issues should the typing break in the model, example from `transactions-screen.tsx`:
+
+```typescript
+const [data, setData] = useState<Transaction[]>([])
+const [currentUser, setCurrentUser] = useState<User | null>(null)
+```
+
 ## Quick Start
 
 The project's structure looks similar to this:
